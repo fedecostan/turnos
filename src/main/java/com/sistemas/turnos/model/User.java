@@ -1,7 +1,6 @@
 package com.sistemas.turnos.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
 
@@ -19,14 +18,7 @@ public class User {
     private String name;
 
     @Column(name = "email")
-    @Email(message = "Invalid email")
     private String email;
-
-    @Column(name = "mobile")
-    private String mobile;
-
-    public User() {
-    }
 
     public Integer getId() {
         return id;
@@ -52,11 +44,4 @@ public class User {
         this.email = email;
     }
 
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
 }
