@@ -1,13 +1,10 @@
 package com.sistemas.turnos.repository;
 
-import com.sistemas.turnos.model.Paciente;
+import com.sistemas.turnos.model.Pais;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PacienteRepository extends JpaRepository<Paciente, Long> {
-
-
-
+public interface PaisRepository extends JpaRepository<Pais, Long> {
 
 }
