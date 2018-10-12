@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=100%, initial-scale=1">
+    <link rel="icon" type="image/png" href="../resources/img/turnos.png"/>
+    <meta content="width=1336 px">
+    <link rel="stylesheet" href="../resources/css/ng-table.min.css">
+    <link rel="stylesheet" href="../resources/css/app.css">
+    <title>Turnos</title>
+</head>
+<script src="../resources/js/lib/angular.min.js"></script>
+<script src="../resources/js/app.js"></script>
+<script src="../resources/js/controllers/abmEspecialidadesControllers.js"></script>
+<script src="../resources/js/lib/ng-table.min.js"></script>
+<body>
+<div class="container" ng-controller="AbmEspecialidadesController">
+    <div id="agrupar">
+        <header>
+            <div id="cabecera">
+                <h1>Centro Médico</h1>
+            </div>
+            <div id="izqui">
+                <h5 > Calle 1589 - CP AA1111 - CABA </h5>
+                <h5 > Tel. 236-1258-1245 </h5>
+            </div>
+        </header>
+        <nav id="menu">
+            <ul>
+                <li>Configuración</li>
+                <li>Turnos</li>
+                <li>Lista Turnos</li>
+            </ul>
+        </nav>
+        <section>
+            <div id="buscas">
+                <h3>Especialidades</h3>
+                <table ng-table="especialidadTable" class="table" show-filter="true">
+                    <tr ng-repeat="especialidad in $data">
+                        <td title="'Código'" filter="{ codigo: 'text'}" sortable="'codigo'">{{especialidad.codigo}}</td>
+                        <td title="'Descripción'" filter="{ descripcion: 'text'}" sortable="'descripcion'">{{especialidad.descripcion}}</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <footer id="pie">
+            pie
+        </footer>
+    </div>
+</div>
+</body>
+</html>
