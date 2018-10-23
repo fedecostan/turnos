@@ -23,13 +23,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void nuevoUsuario(UserDTO userDTO) {
-        System.out.println("NUEVO USUARIO: " + userDTO.getUsername());
         User user = new User();
         user.setUserUsername(userDTO.getUsername());
         user.setUserPassword(bCryptPasswordEncoder.encode(userDTO.getPassword()));
         user.setRole(roleRepository.findByName(userDTO.getRole()));
         userRepository.save(user);
-        System.out.println("GAURDADO!!!");
     }
 
 }
