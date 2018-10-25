@@ -27,7 +27,7 @@ public class User implements UserDetails {
     private String userUsername;
 
     @JoinColumn(name = "ROLE_ID")
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Role.class, cascade=CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Role.class, cascade=CascadeType.PERSIST)
     private Role role;
 
     @Override
